@@ -1,0 +1,105 @@
+@base-bg-color:#f7f7f7;
+@base-border-color:#aaa;
+@base-font-color:#797979;
+@base-btn-color:#2aabe7;
+@base-btn-hover-color:#53c7f2;
+@base-color:red;
+@base-num:5%;
+@fliter-num:@base-num * 2;
+@other-num:@base-num + @fliter-num;
+
+html,body,ul,li{margin:0;padding:0;font-size:14px;font-family:"Microsoft Yahei";}
+.header{
+	width:980px;
+	margin:0 auto;
+	background-color:@base-bg-color;
+	h1{
+	     font-size:20px;
+	     color:@base-font-color;
+	     font-weight:bold;
+	  }
+}
+.content{
+	width:980px;
+	margin:0 auto;
+	.left{
+	    width:198px;
+	    float:left;
+	    border:1px solid @base-border-color;
+	    ul{
+	        width:180px;
+	        margin:9px;
+	    }
+	    ul li{
+	        height:30px;
+	        line-height:30px;
+	        border-bottom:1px solid @base-border-color;
+	        list-style:none;
+	        color:@base-font-color;
+	    }
+	 }
+	 .right{
+	     width:718px;
+	     margin-left:20px;
+	     padding:20px;
+	     border:1px solid @base-border-color;
+	     float:left;
+	     .part1{
+	            width:718px;
+	            height:50px;
+	            border:1px solid @base-border-color;
+	         }
+	     .part2{
+	         width:200px;
+	         height:200px;
+	         border:1px solid @base-border-color;
+	         margin-top:20px;
+	         .border;
+	        }
+	     }
+}
+.footer{
+    width:980px;
+    margin:0 auto;
+    clear:both;
+    text-align:center;
+    margin-top:20px;
+    }
+/*试试混入*/
+.border{
+    border-top:2px solid #08c;
+    border-bottom:2px solid #08c
+    }
+/*试试嵌套*/
+.content{
+        .part3{
+                width:300px;
+                height:100%/2 + @base-num;
+                .border;
+               
+            }
+        .part2{
+                background:@base-color * 15%;
+                color:#fff;
+                .button{
+                    #bundle > .button;
+                    }
+                
+            
+            }
+        
+        
+    }
+/*试试namespace&&accessor*/ 
+#bundle {
+          .button {
+                display: inline-block;
+                border: 1px solid black;
+                background-color: grey;
+          }
+    }
+
+
+
+
+
